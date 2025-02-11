@@ -6,10 +6,10 @@ using TMPro;
 
 public class Timer: MonoBehaviour
 {
-    public int time;
-    public int seconds = 1;
-    
-    
+    public float time = 10;
+
+    [SerializeField]
+    public TMP_Text timerText;
     
     public void Start()
     {
@@ -18,9 +18,13 @@ public class Timer: MonoBehaviour
 
     public void Update()
     {
-        for (time = 10; time > 0; --seconds)
+        if (time == 0) return;
+        time = time - Time.deltaTime;
+        timerText.text = "Timer: " + (int) time;
+
+        if (time <= 0)
         {
-            
+            time = 0;
         }
     }
 }
