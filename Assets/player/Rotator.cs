@@ -27,5 +27,7 @@ public class Rotator : MonoBehaviour
         angle = Mathf.Atan2(x, z) * Mathf.Rad2Deg;
 
         RotatorObject.transform.rotation = Quaternion.Euler(0, angle, 0);
+
+        //RotatorObject.transform.rotation += transform.parent.rotation;
     }
 }
