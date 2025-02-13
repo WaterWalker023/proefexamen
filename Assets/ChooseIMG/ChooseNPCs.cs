@@ -1,8 +1,11 @@
 using System;
+using System.Linq;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework;
 using Unity.VisualScripting;
+using UnityEngine.Events;
 
 public class ChooseNPCs: MonoBehaviour
 {
@@ -10,23 +13,23 @@ public class ChooseNPCs: MonoBehaviour
     //Pull npcs to main screen
     //Click button to choose one of the npcs
 
-    [SerializeField] public List<GameObject> NPCS;
+    
+    [SerializeField] private GameObject[] NPCS;
     
     public void Start()
     {
-        Debug.Log("Pulling NPCs");
+        
     }
 
     public void Update()
     {
-        //if (gameObject.GetComponent<Timer>().time == 0)
-        {
-            pullNPCS();
-        }
+        
     }
 
-    private void pullNPCS()
+    public void pullNPCS()
     {
-        NPCS.Add(GameObject.FindGameObjectWithTag("NPC"));
+        NPCS = GameObject.FindGameObjectsWithTag("NPC"); // Adds NPCs into a list by searching them with a tag called "NPC"
+
+        
     }
 }

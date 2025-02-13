@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.Events;
 
 public class Timer: MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Timer: MonoBehaviour
 
     [SerializeField]
     public TMP_Text timerText;
+    
+    public UnityEvent timeOn0 = new();
     
     public void Start()
     {
@@ -25,6 +28,8 @@ public class Timer: MonoBehaviour
         if (time <= 0)
         {
             time = 0;
+            timeOn0.Invoke();
+            
         }
     }
 }
