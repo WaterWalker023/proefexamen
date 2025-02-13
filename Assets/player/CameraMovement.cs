@@ -1,15 +1,13 @@
+using System;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private Vector3 lookDirection;
 
-    void Start()
-    {
-    }
 
-    // Update is called once per frame
     void Update()
     {
         lookDirection.y = transform.position.y;
@@ -18,7 +16,12 @@ public class CameraMovement : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        Gizmos.color = new Color(0, 1, 1, 0.5f);
-        Gizmos.DrawSphere(lookDirection, 0.5f);
+        if (Selection.objects[0] == transform.gameObject)
+        {
+            Gizmos.color = new Color(0, 1, 1, 0.5f);
+            Gizmos.DrawSphere(lookDirection, 0.5f);
+        }
     }
+
+
 }
