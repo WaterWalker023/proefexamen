@@ -21,11 +21,13 @@ public class Movement : MonoBehaviour
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
 
+        transform.rotation = Camera.main.transform.parent.rotation;
+        
         Velocity.y = -2;
         Velocity.y += gravity * Time.deltaTime;
         characterController.Move(Velocity * Time.deltaTime);
         
         var move = transform.right * x + transform.forward * z;
-        characterController.Move(move * speed * Time.deltaTime);
+        characterController.Move((move * speed * Time.deltaTime) * -1);
     }
 }
