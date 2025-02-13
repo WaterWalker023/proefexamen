@@ -9,22 +9,7 @@ using UnityEngine.Events;
 
 public class ChooseNPCs: MonoBehaviour
 {
-    //If time = 0
-    //Pull npcs to main screen
-    //Click button to choose one of the npcs
-
-    
     [SerializeField] private GameObject[] NPCS;
-    
-    public void Start()
-    {
-        
-    }
-
-    public void Update()
-    {
-        
-    }
 
     public void pullNPCS()
     {
