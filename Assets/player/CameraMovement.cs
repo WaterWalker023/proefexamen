@@ -16,12 +16,7 @@ public class CameraMovement : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        if (Selection.objects[0] == transform.gameObject)
-        {
-            Gizmos.color = new Color(0, 1, 1, 0.5f);
-            Gizmos.DrawSphere(lookDirection, 0.5f);
-        }
+        Gizmos.color = new Color(0, 1, 1, 0.5f);
+        Gizmos.DrawSphere(lookDirection, 0.5f);
     }
-
-
 }

@@ -19,7 +19,7 @@ public class Overlapbox : MonoBehaviour
         
         for (int i = 0; i < hitColliders.Length; i++)
         {
-            //Debug.Log("Hit : " + hitColliders[i].name + i);
+            Debug.Log("Hit : " + hitColliders[i].name + i);
         }
     }
 
