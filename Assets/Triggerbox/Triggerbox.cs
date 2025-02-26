@@ -11,15 +11,16 @@ public class Triggerbox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.name == "Player")
+        if (other.transform.GetComponent<CharacterController>())
         {
+            Debug.Log("Enter");
             OnPlayerEnter.Invoke();
         }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.transform.name == "Player")
+        if (other.transform.GetComponent<CharacterController>())
         {
             OnPlayerStay.Invoke();
         }
@@ -27,7 +28,7 @@ public class Triggerbox : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.transform.name == "Player")
+        if (other.transform.GetComponent<CharacterController>())
         {
             OnPlayerExit.Invoke();
         }
