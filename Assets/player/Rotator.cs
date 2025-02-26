@@ -19,6 +19,9 @@ public class Rotator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        
+        /*
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
         
@@ -26,7 +29,8 @@ public class Rotator : MonoBehaviour
 
         angle = Mathf.Atan2(x, z) * Mathf.Rad2Deg;
 
-        RotatorObject.transform.rotation = Quaternion.Euler(0, angle, 0);
+        RotatorObject.transform.rotation = Quaternion.Euler(0, angle + transform.parent.rotation.y, 0);
+*/
 
         //RotatorObject.transform.rotation += transform.parent.rotation;
     }
