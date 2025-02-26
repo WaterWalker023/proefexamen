@@ -21,11 +21,11 @@ public class NavigationNPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.destination = waypointList[waypointIndex].transform.position;
-
         if (agent.remainingDistance < 1)
         {
             waypointIndex = Random.Range(0, waypointList.Count);
+
+            agent.destination = waypointList[waypointIndex].transform.position;
         }
     }
 }
