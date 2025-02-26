@@ -1,15 +1,13 @@
+using System;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
     [SerializeField] private Vector3 lookDirection;
 
-    void Start()
-    {
-    }
 
-    // Update is called once per frame
     void Update()
     {
         lookDirection.y = transform.position.y;
