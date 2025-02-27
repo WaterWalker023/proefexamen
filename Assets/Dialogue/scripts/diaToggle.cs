@@ -9,7 +9,7 @@ public class diaToggle : MonoBehaviour
         
     }
 
-    private void Toggle()
+    public void Toggle()
     {
         diaNpc.SetActive (!diaNpc.activeInHierarchy);
         diaInput.SetActive (!diaInput.activeInHierarchy);

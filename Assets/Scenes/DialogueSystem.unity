@@ -460,7 +460,7 @@ Canvas:
   m_GameObject: {fileID: 761638146}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 995508386}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -995,6 +995,7 @@ GameObject:
   - component: {fileID: 1274992664}
   - component: {fileID: 1274992665}
   - component: {fileID: 1274992666}
+  - component: {fileID: 1274992667}
   m_Layer: 0
   m_Name: Dialogue Handeler
   m_TagString: Untagged
@@ -1058,6 +1059,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diaNpc: {fileID: 507459884}
   diaInput: {fileID: 1827569220}
+--- !u!114 &1274992667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274992662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1274992666}
+        m_TargetAssemblyTypeName: diaToggle, Assembly-CSharp
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1818481527
 GameObject:
   m_ObjectHideFlags: 0
