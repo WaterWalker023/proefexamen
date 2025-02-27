@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 635121731}
   - component: {fileID: 635121730}
   - component: {fileID: 635121729}
+  - component: {fileID: 635121734}
   m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
@@ -364,6 +365,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &635121734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635121728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 635121734}
+        m_TargetAssemblyTypeName: Interact, Assembly-CSharp
+        m_MethodName: Interacting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &998941310
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +405,7 @@ GameObject:
   - component: {fileID: 998941312}
   - component: {fileID: 998941311}
   - component: {fileID: 998941315}
+  - component: {fileID: 998941316}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -500,6 +529,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &998941316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998941310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 635121734}
+        m_TargetAssemblyTypeName: Interact, Assembly-CSharp
+        m_MethodName: Interacting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &999377839
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +568,7 @@ GameObject:
   - component: {fileID: 999377842}
   - component: {fileID: 999377841}
   - component: {fileID: 999377840}
+  - component: {fileID: 999377844}
   m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
@@ -608,6 +665,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -70.569, y: 90, z: 0}
+--- !u!114 &999377844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999377839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 635121734}
+        m_TargetAssemblyTypeName: Interact, Assembly-CSharp
+        m_MethodName: Interacting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1031405162
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +705,7 @@ GameObject:
   - component: {fileID: 1031405164}
   - component: {fileID: 1031405163}
   - component: {fileID: 1031405167}
+  - component: {fileID: 1031405168}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -744,6 +829,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1031405168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031405162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 635121734}
+        m_TargetAssemblyTypeName: Interact, Assembly-CSharp
+        m_MethodName: Interacting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1137746101
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,7 +924,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnPlayerEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnPlayerStay:
     m_PersistentCalls:
       m_Calls: []
@@ -832,6 +956,7 @@ GameObject:
   - component: {fileID: 1794908942}
   - component: {fileID: 1794908941}
   - component: {fileID: 1794908945}
+  - component: {fileID: 1794908946}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -955,6 +1080,33 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1794908946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794908940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 635121734}
+        m_TargetAssemblyTypeName: Interact, Assembly-CSharp
+        m_MethodName: Interacting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2061090852
 GameObject:
   m_ObjectHideFlags: 0

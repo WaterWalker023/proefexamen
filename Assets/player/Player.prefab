@@ -213,6 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 12
   gravity: -100000
+  sensitivity: 200
 --- !u!1 &4784872205454374411
 GameObject:
   m_ObjectHideFlags: 0

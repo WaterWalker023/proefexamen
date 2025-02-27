@@ -10,8 +10,8 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        lookDirection.y = transform.position.y;
-        transform.LookAt(lookDirection);
+        //lookDirection.y = transform.position.y;
+        //transform.LookAt(lookDirection);
     }
 
     void OnDrawGizmos()
