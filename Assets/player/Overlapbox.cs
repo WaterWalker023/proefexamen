@@ -1,31 +1,44 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Overlapbox : MonoBehaviour
 {
     [SerializeField] private LayerMask m_LayerMask;
+    private Collider[] ListColliders;
 
     void Start()
     {
-        
     }
 
     void FixedUpdate()
     {
         MyCollisions();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Interact();
+        }
     }
+
     void MyCollisions()
     {
-        Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2, transform.rotation, m_LayerMask);
-        
-        for (int i = 0; i < hitColliders.Length; i++)
+        ListColliders = Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2,
+            transform.rotation, m_LayerMask);
+    }
+
+    public void Interact()
+    {
+        for (int i = 0; i < ListColliders.Length; i++)
         {
-            Debug.Log("Hit : " + hitColliders[i].name + i);
+            if (ListColliders[i].GetComponent<Interact>())
+            {
+                ListColliders[i].GetComponent<Interact>().OnInteract.Invoke();
+            }
         }
     }
 
     void OnDrawGizmos()
     {
-        Gizmos.color = Color.red; 
+        Gizmos.color = Color.red;
         Gizmos.DrawWireCube(transform.position, transform.localScale);
     }
 }
