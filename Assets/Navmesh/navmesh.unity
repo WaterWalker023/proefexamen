@@ -650,11 +650,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1448000724}
   m_SourcePrefab: {fileID: 100100000, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
---- !u!4 &1401955798 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4232559577622643153, guid: b368730976f67b285aae1ab79e708df1, type: 3}
-  m_PrefabInstance: {fileID: 2014554846}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1448000723 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2062265472608843961, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
@@ -681,7 +676,6 @@ MonoBehaviour:
   - {fileID: 827900119}
   - {fileID: 1549390224}
   waypointIndex: 0
-  player: {fileID: 1401955798}
 --- !u!1 &1549390224
 GameObject:
   m_ObjectHideFlags: 0
