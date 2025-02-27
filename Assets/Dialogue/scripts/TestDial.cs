@@ -24,13 +24,14 @@ public class TestDial : MonoBehaviour
         
         ChatMessage devMessage = new ChatMessage
         {
-            Content = "Your James the local bar owner. you like being left alone but are a good listener. you know the towns people better than any one. " +
+            Content = "Your James the local bar owner. you like being left alone but are a good listener. You only respond to what is being asked. you know the towns people better than any one. " +
                       "Those towns people are: Sweets the farmer,Baron the flecther,Kronie,Fauna the forest witch, Mumei the Knight",
             Role = "developer"
         };
         if (!_once)
         {
             _messages.Add(devMessage);
+            _once = true;
         }
     
         ChatMessage newMessage = new ChatMessage
