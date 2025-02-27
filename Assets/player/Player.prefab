@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 989728079256461232}
-  - component: {fileID: 4594169606455027541}
   m_Layer: 0
   m_Name: Camera movement
   m_TagString: Untagged
@@ -33,19 +32,6 @@ Transform:
   - {fileID: 2330451152583084603}
   m_Father: {fileID: 4232559577622643153}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &4594169606455027541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2412166901938311194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d8aad0d2820d3eea84aeb6ce4bd05e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lookDirection: {x: 0, y: 0, z: 0}
 --- !u!1 &3113372879588640484
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 12
   gravity: -100000
+  sensitivity: 200
 --- !u!1 &4784872205454374411
 GameObject:
   m_ObjectHideFlags: 0
