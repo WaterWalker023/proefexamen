@@ -13,7 +13,6 @@ public class Triggerbox : MonoBehaviour
     {
         if (other.transform.GetComponent<CharacterController>())
         {
-            Debug.Log("Enter");
             OnPlayerEnter.Invoke();
         }
     }
