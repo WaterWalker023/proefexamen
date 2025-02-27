@@ -2,12 +2,19 @@ using UnityEngine;
 
 public class diaToggle : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private GameObject diaNpc;
+    [SerializeField] private GameObject diaInput;
     void Start()
     {
         
     }
 
+    private void Toggle()
+    {
+        diaNpc.SetActive (!diaNpc.activeInHierarchy);
+        diaInput.SetActive (!diaInput.activeInHierarchy);
+    }
+    
     // Update is called once per frame
     void Update()
     {

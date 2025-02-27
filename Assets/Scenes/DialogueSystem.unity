@@ -404,7 +404,6 @@ GameObject:
   - component: {fileID: 761638149}
   - component: {fileID: 761638148}
   - component: {fileID: 761638147}
-  - component: {fileID: 761638151}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -496,18 +495,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &761638151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 761638146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52751ed4a10c23e47bc50393d7aa7f27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &955385532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1274992664}
   - component: {fileID: 1274992665}
+  - component: {fileID: 1274992666}
   m_Layer: 0
   m_Name: Dialogue Handeler
   m_TagString: Untagged
@@ -1056,6 +1044,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1274992666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274992662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52751ed4a10c23e47bc50393d7aa7f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diaNpc: {fileID: 507459884}
+  diaInput: {fileID: 1827569220}
 --- !u!1 &1818481527
 GameObject:
   m_ObjectHideFlags: 0
