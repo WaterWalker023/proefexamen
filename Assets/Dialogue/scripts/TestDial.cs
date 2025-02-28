@@ -39,7 +39,7 @@ public class TestDial : MonoBehaviour
         };
         if (!_once)
         {
-            //_messages.Add(devMessage);
+            _messages.Add(devMessage);
             _once = true;
         }
     
@@ -48,7 +48,6 @@ public class TestDial : MonoBehaviour
             Content = newText,
             Role = "user"
         };
-        Debug.Log(newText);
         _messages.Add(newMessage);
 
         CreateChatCompletionRequest request = new CreateChatCompletionRequest
