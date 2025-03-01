@@ -8,7 +8,7 @@
         "com.unity.nuget.newtonsoft-json": "3.2.1"
       },
       "hash": "054467e2a2daccf7f23ff8f7165f1d832815dc70"
-    },  
+    },
     "com.unity.ai.navigation": {
       "version": "2.0.6",
       "depth": 0,
@@ -109,7 +109,10 @@
     },
     "com.unity.nuget.mono-cecil": {
       "version": "1.11.4",
-      "depth": 3
+      "depth": 3,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.2.1",
