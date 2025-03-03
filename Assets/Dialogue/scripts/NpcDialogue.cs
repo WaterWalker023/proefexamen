@@ -76,7 +76,7 @@ public class NpcDialogue : MonoBehaviour
             var chatResponse = response.Choices[0].Message;
             _messages.Add(chatResponse);
             
-            Debug.Log(chatResponse.Content);
+           
             
             onResponse.Invoke(chatResponse.Content);
         }
