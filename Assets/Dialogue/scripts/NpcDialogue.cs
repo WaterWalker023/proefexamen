@@ -7,8 +7,21 @@ using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 
-public class TestDial : MonoBehaviour
+public class NpcDialogue : MonoBehaviour
 {
+    [SerializeField] private string NpcName;
+    [SerializeField] private string NpcJob_Ocupation;
+    [TextArea(15, 20)]
+    [SerializeField] private string NpcDescription;
+    [TextArea(5, 10)]
+    [SerializeField] private string OtherNpcs;
+    private enum Tone
+    {
+        Friendly, Neutral, Serious, Apprehensive, Aggressive
+    }; 
+    
+    [SerializeField] private Tone toneType;
+    
     public OnResponseEvent onResponse;
     
     [Serializable]
@@ -25,16 +38,15 @@ public class TestDial : MonoBehaviour
         {
             Content = "you are:"+
                       "NPC: " +
-                      "James; " +
+                      NpcName +
                       "NPC job: " +
-                      "Town Bar owner; " +
+                      NpcJob_Ocupation +
                       "NPC Description: " +
-                      "James is an older fellow that runs the only bar on this island and thus has interacted with a lot of people." +
-                      "He has a lot of drinks like chocomelk, koffie and thee. " +
-                      "He also has a deer head he shot himself he is realy proud of that. " +
-                      "He also was on a cool adventure that he cant stop talking about" +
+                      NpcDescription+
+                      "Your Tone is"+
+                      toneType+
                       "Other NPC residents: " +
-                      "Sweets the farmer,Baron the flecther,Kronie the Mage,Fauna the forest witch, Mumei the Knight; ",
+                      OtherNpcs,
             Role = "developer"
         };
         if (!_once)
