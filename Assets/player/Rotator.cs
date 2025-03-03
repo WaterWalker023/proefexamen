@@ -21,16 +21,14 @@ public class Rotator : MonoBehaviour
     {
         
         
-        /*
+        
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
         
         if (new Vector2(x, z) == Vector2.zero) return;
 
         angle = Mathf.Atan2(x, z) * Mathf.Rad2Deg;
-
-        RotatorObject.transform.rotation = Quaternion.Euler(0, angle + transform.parent.rotation.y, 0);
-*/
+        RotatorObject.transform.rotation = Quaternion.Euler(0, angle + transform.parent.rotation.eulerAngles.y, 0);
 
         //RotatorObject.transform.rotation += transform.parent.rotation;
     }
