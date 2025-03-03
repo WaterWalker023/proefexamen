@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -7,6 +8,8 @@ public class Movement : MonoBehaviour
     [SerializeField] float gravity = -10;
     [SerializeField] private float sensitivity;
 
+    private bool canMove;
+    
     private Vector3 Velocity;
     private float x;
     private float z;
@@ -14,6 +17,7 @@ public class Movement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        canMove = true;
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -22,6 +26,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!canMove) return;
+
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
         
@@ -34,5 +40,16 @@ public class Movement : MonoBehaviour
         
         var move = transform.right * x + transform.forward * z;
         characterController.Move(move * (speed * Time.deltaTime));
+    }
+
+    public void SetMovement(bool value)
+    {
+        canMove = value;
+    }
+
+    public void SetCursor(bool value)
+    {
+        Cursor.lockState = value ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !value;
     }
 }
