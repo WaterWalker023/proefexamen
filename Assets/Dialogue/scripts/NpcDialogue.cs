@@ -6,19 +6,18 @@ using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
-
 public class NpcDialogue : MonoBehaviour
 {
-    [SerializeField] private string NpcName;
-    [SerializeField] private string NpcJob_Ocupation;
-    [TextArea(15, 20)]
-    [SerializeField] private string NpcDescription;
-    [TextArea(5, 10)]
-    [SerializeField] private string OtherNpcs;
     private enum Tone
     {
         Friendly, Neutral, Serious, Apprehensive, Aggressive
     }; 
+    
+    [SerializeField] private string NpcName;
+    [SerializeField] private string NpcJob_Ocupation;
+    
+    [TextArea(15, 20)] [SerializeField] private string NpcDescription;
+    [TextArea(5, 10)] [SerializeField] private string OtherNpcs;
     
     [SerializeField] private Tone toneType;
     
@@ -76,7 +75,7 @@ public class NpcDialogue : MonoBehaviour
             var chatResponse = response.Choices[0].Message;
             _messages.Add(chatResponse);
             
-           
+            
             
             onResponse.Invoke(chatResponse.Content);
         }
