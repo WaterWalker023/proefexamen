@@ -23,14 +23,23 @@ public class NpcDialogue : MonoBehaviour
     
     public OnResponseEvent onResponse;
     
+    [SerializeField] private GameObject dia;
+    
     [Serializable]
     public class OnResponseEvent: UnityEvent<string>
     {
         
     }
+    
     private OpenAIApi _openAI = new (Environment.GetEnvironmentVariable("OPENAI_API_KEY", EnvironmentVariableTarget.User));
     private List<ChatMessage> _messages = new List<ChatMessage>();
     private bool _once;
+    
+    public void Toggle()
+    {
+        dia.SetActive (!dia.activeInHierarchy);
+    }
+
     public async void AskChatGPT(string newText)
     {
         ChatMessage devMessage = new ChatMessage
@@ -74,8 +83,6 @@ public class NpcDialogue : MonoBehaviour
         {
             var chatResponse = response.Choices[0].Message;
             _messages.Add(chatResponse);
-            
-            
             
             onResponse.Invoke(chatResponse.Content);
         }
