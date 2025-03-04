@@ -4,5 +4,15 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/SceneSwitchManager/SceneSwitch.unity
+    guid: 3d152839beeba7b46b93548216c0a394
+  - enabled: 1
+    path: Assets/SceneSwitchManager/Scene2Test.unity
+    guid: c77132882198cdd46972842d05d822dc
+  - enabled: 1
+    path: Assets/SceneSwitchManager/Scene3Test.unity
+    guid: 27767c5aeb5073e40a1a995b56287516
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
