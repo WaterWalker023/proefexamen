@@ -16,14 +16,15 @@ public class Timer: MonoBehaviour
     
     public void Start()
     {
-        Debug.Log("Start Time");
+       
     }
 
     public void Update()
     {
         if (time == 0) return;
-        time = time - Time.deltaTime;
-        timerText.text = "Timer: " + (int) time;
+        time =- Time.deltaTime;
+        timerText.text = Mathf.Floor(time / 60 ).ToString("00")  + ":" + Mathf.FloorToInt(time%60).ToString("00");
+        
 
         if (time <= 0)
         {
