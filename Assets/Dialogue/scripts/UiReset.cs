@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UiReset : MonoBehaviour
 {
@@ -14,6 +16,7 @@ public class UiReset : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             GameObject.FindWithTag("NPC").GetComponent<Interact>().LeaveInteract();
+            Debug.Log("leave UI");
         }
     }
 }
