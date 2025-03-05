@@ -1,15 +1,20 @@
+using Unity.Burst.Intrinsics;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject resumeButton;
 
-    public GameObject quitButton;
+    public GameObject backToMenuButton;
+    
+    public TMP_Text titleText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         resumeButton.SetActive(false);
-        quitButton.SetActive(false);
+        backToMenuButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -18,7 +23,7 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape))
         {
             resumeButton.SetActive(true);
-            quitButton.SetActive(true);
+            backToMenuButton.SetActive(true);
 
             Time.timeScale = 0;
         }
@@ -29,6 +34,14 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
         
         resumeButton.SetActive(false);
-        quitButton.SetActive(false);
+        backToMenuButton.SetActive(false);
+    }
+
+    public void backToMenu(string sceneName)
+    {
+        Time.timeScale = 1;
+
+        SceneManager.LoadScene(sceneName);
+
     }
 }
