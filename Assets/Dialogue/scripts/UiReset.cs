@@ -14,7 +14,6 @@ public class UiReset : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             GameObject.FindWithTag("NPC").GetComponent<Interact>().LeaveInteract();
-            Debug.Log( GameObject.FindWithTag("NPC").name);
         }
     }
 }

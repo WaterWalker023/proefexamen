@@ -20,13 +20,12 @@ public class Interact : MonoBehaviour
     public void LeaveInteract()
     {
         OnLeaveInteract.Invoke();
-        if (GameObject.FindWithTag("Dia").activeInHierarchy)
+        if (GameObject.FindWithTag("Dia") && GameObject.FindWithTag("Dia").activeInHierarchy)
         {
             var var = FindAnyObjectByType<CharacterController>();
             var.GetComponent<Movement>().SetMovement(!canmove);
             var.GetComponent<Movement>().SetCursor(!canmovemouse);
             GetComponent<NpcDialogue>().DeactivedUi();
-            Debug.Log("help me");
         } 
     }
 }
