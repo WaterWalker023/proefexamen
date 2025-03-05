@@ -6,9 +6,21 @@ using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
-
-public class TestDial : MonoBehaviour
+public class NpcDialogue : MonoBehaviour
 {
+    private enum Tone
+    {
+        Friendly, Neutral, Serious, Apprehensive, Aggressive
+    }; 
+    
+    [SerializeField] private string NpcName;
+    [SerializeField] private string NpcJob_Ocupation;
+    
+    [TextArea(15, 20)] [SerializeField] private string NpcDescription;
+    [TextArea(5, 10)] [SerializeField] private string OtherNpcs;
+    
+    [SerializeField] private Tone toneType;
+    
     public OnResponseEvent onResponse;
     
     [Serializable]
@@ -21,11 +33,19 @@ public class TestDial : MonoBehaviour
     private bool _once;
     public async void AskChatGPT(string newText)
     {
-        
         ChatMessage devMessage = new ChatMessage
         {
-            Content = "Your James the local bar owner. you like being left alone but are a good listener. You only respond to what is being asked. you know the towns people better than any one. " +
-                      "Those towns people are: Sweets the farmer,Baron the flecther,Kronie,Fauna the forest witch, Mumei the Knight",
+            Content = "you are:"+
+                      "NPC: " +
+                      NpcName +
+                      "NPC job: " +
+                      NpcJob_Ocupation +
+                      "NPC Description: " +
+                      NpcDescription+
+                      "Your Tone is"+
+                      toneType+
+                      "Other NPC residents: " +
+                      OtherNpcs,
             Role = "developer"
         };
         if (!_once)
@@ -37,15 +57,15 @@ public class TestDial : MonoBehaviour
         ChatMessage newMessage = new ChatMessage
         {
             Content = newText,
-            Role = "system"
+            Role = "user"
         };
-
         _messages.Add(newMessage);
 
         CreateChatCompletionRequest request = new CreateChatCompletionRequest
         {
             Messages = _messages,
-            Model = "gpt-3.5-turbo"
+            Model = "gpt-3.5-turbo",
+            Temperature = 0.85f
         };
 
         var response = await _openAI.CreateChatCompletion(request);
@@ -55,7 +75,7 @@ public class TestDial : MonoBehaviour
             var chatResponse = response.Choices[0].Message;
             _messages.Add(chatResponse);
             
-            Debug.Log(chatResponse.Content);
+            
             
             onResponse.Invoke(chatResponse.Content);
         }
