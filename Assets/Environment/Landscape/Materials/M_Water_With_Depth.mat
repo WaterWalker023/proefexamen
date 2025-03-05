@@ -24,6 +24,7 @@ Material:
   disabledShaderPasses:
   - MOTIONVECTORS
   - DepthOnly
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -135,7 +136,7 @@ Material:
     - _Blend: 0
     - _BlendModePreserveSpecular: 0
     - _BumpScale: 1
-    - _CastShadows: 1
+    - _CastShadows: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -155,7 +156,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _Normal_Str: 1
+    - _Normal_Str: 0.001
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -163,7 +164,7 @@ Material:
     - _ReceiveShadows: 0
     - _Refection: 0
     - _Reflection_refrector: 10.92
-    - _Smoothnes: 0
+    - _Smoothnes: 0.216
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -191,6 +192,7 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Uv1: {r: 3.3, g: 4, b: 0, a: 0}
     - _Uv2: {r: 9.13, g: 3.75, b: -1.07, a: 0.06}
+    - _Water_Color: {r: 0.16216975, g: 0.12540404, b: 0.3886792, a: 0}
     - _Waterspeed2: {r: 2.93, g: -1.93, b: 0, a: 0}
     - _color2: {r: 0.3152555, g: 0.4528302, b: 0.29647562, a: 0}
     - _waterspeed: {r: 0, g: 0, b: 0, a: 0}
