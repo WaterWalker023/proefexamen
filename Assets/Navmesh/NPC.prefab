@@ -10,6 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 766169076185934432}
   - component: {fileID: 5895694699215649032}
+  - component: {fileID: 8612972079649220742}
+  - component: {fileID: 339650195487836246}
+  - component: {fileID: 7879501325155452096}
+  - component: {fileID: 2930356547997348786}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -55,6 +59,99 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &8612972079649220742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062265472608843961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2815d980a4fa50d48a49b8ecc299a54f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypointList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  waypointIndex: 0
+--- !u!114 &339650195487836246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062265472608843961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df231d1b1501cd94f8e7c343e55fb982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NpcName: 
+  NpcJob_Ocupation: 
+  NpcDescription: 
+  OtherNpcs: 
+  toneType: 0
+  onResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dia: {fileID: 0}
+--- !u!114 &7879501325155452096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062265472608843961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canmovemouse: 0
+  canmove: 0
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLeaveInteract:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!136 &2930356547997348786
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2062265472608843961}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5663460771160189962
 GameObject:
   m_ObjectHideFlags: 0
