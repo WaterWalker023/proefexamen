@@ -35,9 +35,15 @@ public class NpcDialogue : MonoBehaviour
     private List<ChatMessage> _messages = new List<ChatMessage>();
     private bool _once;
     
-    public void Toggle()
+    public void ActivedUi()
     {
-        dia.SetActive (!dia.activeInHierarchy);
+        dia.SetActive (true);
+    }
+    
+    public void DeactivedUi()
+    {
+        onResponse.Invoke("....");
+        dia.SetActive(false);
     }
 
     public async void AskChatGPT(string newText)

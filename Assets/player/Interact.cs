@@ -11,13 +11,22 @@ public class Interact : MonoBehaviour
     public void Interacting()
     {
         OnInteract.Invoke();
-        GetComponent<Movement>().SetMovement(canmove);
-        GetComponent<Movement>().SetCursor(canmovemouse);
-        GetComponent<NpcDialogue>().Toggle();
+        var var = FindAnyObjectByType<CharacterController>();
+        var.GetComponent<Movement>().SetMovement(canmove);
+        var.GetComponent<Movement>().SetCursor(canmovemouse);
+        GetComponent<NpcDialogue>().ActivedUi();
     }
     
     public void LeaveInteract()
     {
-        Debug.Log("Left Interacting");  
+        OnLeaveInteract.Invoke();
+        if (GameObject.FindWithTag("Dia").activeInHierarchy)
+        {
+            var var = FindAnyObjectByType<CharacterController>();
+            var.GetComponent<Movement>().SetMovement(!canmove);
+            var.GetComponent<Movement>().SetCursor(!canmovemouse);
+            GetComponent<NpcDialogue>().DeactivedUi();
+            Debug.Log("help me");
+        } 
     }
 }
