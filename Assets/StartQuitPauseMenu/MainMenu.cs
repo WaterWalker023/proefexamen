@@ -21,7 +21,6 @@ public class MainMenu : MonoBehaviour
         if (hasClicked)
         {
             mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, gameplayCameraPos.position, 10 * Time.deltaTime);
-            Debug.Log("Camera moving");
         }
     }
 
