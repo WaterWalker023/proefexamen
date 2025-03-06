@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 83755ac03d571634fbbd50e9bb6d6875, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 30bbad08a6bef3f4b8c4628cf499d8ff, type: 2}
+      objectReference: {fileID: 2100000, guid: 8108da83358f37d45adf8bf67ad85a2a, type: 2}
     - target: {fileID: 919132149155446097, guid: 83755ac03d571634fbbd50e9bb6d6875, type: 3}
       propertyPath: m_Name
       value: Paddenstoel_Plat
