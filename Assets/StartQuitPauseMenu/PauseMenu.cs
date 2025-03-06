@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject resumeButton;
+    [SerializeField] private GameObject resumeButton;
 
-    public GameObject backToMenuButton;
+    [SerializeField] private GameObject backToMenuButton;
     
-    public TMP_Text titleText;
+    [SerializeField] private TMP_Text titleText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

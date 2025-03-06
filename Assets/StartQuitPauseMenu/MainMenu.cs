@@ -6,15 +6,15 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject mainCamera;
-    public GameObject startButton;
-    public GameObject quitButton;
+    [SerializeField] private GameObject mainCamera;
+    [SerializeField] private GameObject startButton;
+    [SerializeField] private GameObject quitButton;
     
-    public Transform gameplayCameraPos;
+    [SerializeField] private Transform gameplayCameraPos;
     
-    private bool hasClicked = false;
+    [SerializeField] private bool hasClicked = false;
 
-    public TMP_Text titleText;
+    [SerializeField] private TMP_Text titleText;
 
     private void Update()
     {

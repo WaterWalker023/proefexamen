@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class TestMove : MonoBehaviour
 {
-    public Transform target;
-    private float speed = 5;
+    [SerializeField] private Transform target;
+    [SerializeField] private float speed = 5;
 
     // Update is called once per frame
     void Update()
