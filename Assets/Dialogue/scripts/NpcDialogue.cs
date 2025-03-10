@@ -2,12 +2,14 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using OpenAI;
+using TMPro;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
 
 public class NpcDialogue : MonoBehaviour
 {
+    
     private enum Tone
     {
         Friendly, Neutral, Serious, Apprehensive, Aggressive
@@ -23,14 +25,33 @@ public class NpcDialogue : MonoBehaviour
     
     public OnResponseEvent onResponse;
     
+    [SerializeField] private GameObject dia;
+    
+    [SerializeField] private GameObject inputField;
+        
     [Serializable]
     public class OnResponseEvent: UnityEvent<string>
     {
         
     }
+    
     private OpenAIApi _openAI = new (Environment.GetEnvironmentVariable("OPENAI_API_KEY", EnvironmentVariableTarget.User));
     private List<ChatMessage> _messages = new List<ChatMessage>();
     private bool _once;
+    
+    public void ActivedUi()
+    {
+        dia.SetActive (true);
+        inputField.GetComponent<TMP_InputField>().onEndEdit.AddListener(AskChatGPT);
+    }
+    
+    public void DeactivedUi()
+    {
+        inputField.GetComponent<TMP_InputField>().onEndEdit.RemoveListener(AskChatGPT);
+        onResponse.Invoke("....");
+        dia.SetActive(false);
+    }
+
     public async void AskChatGPT(string newText)
     {
         ChatMessage devMessage = new ChatMessage
@@ -45,7 +66,8 @@ public class NpcDialogue : MonoBehaviour
                       "Your Tone is"+
                       toneType+
                       "Other NPC residents: " +
-                      OtherNpcs,
+                      OtherNpcs+
+                      "when asked about other people only use th info you know dont generate things for them",
             Role = "developer"
         };
         if (!_once)
@@ -74,8 +96,6 @@ public class NpcDialogue : MonoBehaviour
         {
             var chatResponse = response.Choices[0].Message;
             _messages.Add(chatResponse);
-            
-            
             
             onResponse.Invoke(chatResponse.Content);
         }

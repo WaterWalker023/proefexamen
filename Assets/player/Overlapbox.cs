@@ -13,7 +13,7 @@ public class Overlapbox : MonoBehaviour
     void FixedUpdate()
     {
         MyCollisions();
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Interact();
         }
@@ -31,7 +31,7 @@ public class Overlapbox : MonoBehaviour
         {
             if (ListColliders[i].GetComponent<Interact>())
             {
-                ListColliders[i].GetComponent<Interact>().OnInteract.Invoke();
+                ListColliders[i].GetComponent<Interact>().Interacting();
             }
         }
     }

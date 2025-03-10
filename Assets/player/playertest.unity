@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 249988682}
   - component: {fileID: 249988681}
   - component: {fileID: 249988680}
+  - component: {fileID: 249988684}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -213,8 +214,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1595412536}
-  - {fileID: 1439029065}
+  - {fileID: 373007184}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -222,6 +222,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &249988684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 249988679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980aa23c29cef2c478491c41230d440b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &357845925
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +298,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 21999a5203c0176e3b1e9ae53269b481, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -331,6 +343,43 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &373007183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373007184}
+  m_Layer: 5
+  m_Name: test
+  m_TagString: Dia
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &373007184
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373007183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1595412536}
+  - {fileID: 1439029065}
+  m_Father: {fileID: 249988683}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 451, y: -47.601242}
+  m_SizeDelta: {x: 694.19995, y: 542.2175}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &605875307
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +524,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 21999a5203c0176e3b1e9ae53269b481, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -532,6 +581,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canmovemouse: 0
+  canmove: 0
   OnInteract:
     m_PersistentCalls:
       m_Calls:
@@ -547,6 +598,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnLeaveInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &731920491
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +611,6 @@ GameObject:
   m_Component:
   - component: {fileID: 731920495}
   - component: {fileID: 731920492}
-  - component: {fileID: 731920494}
   - component: {fileID: 731920493}
   m_Layer: 0
   m_Name: Dialogue Handeler
@@ -578,6 +631,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df231d1b1501cd94f8e7c343e55fb982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NpcName: 
+  NpcJob_Ocupation: 
+  NpcDescription: 
+  OtherNpcs: 
+  toneType: 0
   onResponse:
     m_PersistentCalls:
       m_Calls:
@@ -593,6 +651,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  dia: {fileID: 0}
 --- !u!114 &731920493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,35 +664,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canmovemouse: 0
+  canmove: 0
   OnInteract:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 731920494}
-        m_TargetAssemblyTypeName: diaToggle, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &731920494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731920491}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52751ed4a10c23e47bc50393d7aa7f27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diaNpc: {fileID: 1439029064}
-  diaInput: {fileID: 1595412535}
+      m_Calls: []
+  OnLeaveInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &731920495
 Transform:
   m_ObjectHideFlags: 0
@@ -714,7 +752,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 21999a5203c0176e3b1e9ae53269b481, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -798,6 +836,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canmovemouse: 0
+  canmove: 0
   OnInteract:
     m_PersistentCalls:
       m_Calls:
@@ -813,6 +853,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnLeaveInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &999377839
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,7 +920,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 21999a5203c0176e3b1e9ae53269b481, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -934,6 +977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canmovemouse: 0
+  canmove: 0
   OnInteract:
     m_PersistentCalls:
       m_Calls:
@@ -949,6 +994,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnLeaveInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1031405162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,7 +1062,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 21999a5203c0176e3b1e9ae53269b481, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1098,6 +1146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canmovemouse: 0
+  canmove: 0
   OnInteract:
     m_PersistentCalls:
       m_Calls:
@@ -1113,6 +1163,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnLeaveInteract:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1137746101
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,7 +1270,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1439029065
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1225,17 +1278,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439029064}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.2476368, y: 3.1401, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1627592521}
-  m_Father: {fileID: 249988683}
+  m_Father: {fileID: 373007184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 457, y: -12}
+  m_AnchoredPosition: {x: 6, y: 35.601257}
   m_SizeDelta: {x: 300, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1439029066
@@ -1512,7 +1565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1595412536
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1520,17 +1573,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595412535}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.314, y: 2.314, z: 2.314}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 605875308}
-  m_Father: {fileID: 249988683}
+  m_Father: {fileID: 373007184}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 451, y: -284}
+  m_AnchoredPosition: {x: 0, y: -236.39874}
   m_SizeDelta: {x: 300, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1595412537
@@ -1920,9 +1973,10 @@ GameObject:
   - component: {fileID: 1794908941}
   - component: {fileID: 1794908945}
   - component: {fileID: 1794908946}
+  - component: {fileID: 1794908947}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1971,7 +2025,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8405b0a01147c98489244c7544f84473, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2055,33 +2109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f47bba70509ba210b826d2e078fe03f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canmovemouse: 0
+  canmove: 0
   OnInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 635121734}
-        m_TargetAssemblyTypeName: Interact, Assembly-CSharp
-        m_MethodName: Interacting
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 731920494}
-        m_TargetAssemblyTypeName: diaToggle, Assembly-CSharp
-        m_MethodName: Toggle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1694861178}
         m_TargetAssemblyTypeName: Movement, Assembly-CSharp
         m_MethodName: SetMovement
@@ -2106,6 +2138,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  OnLeaveInteract:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1794908947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794908940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df231d1b1501cd94f8e7c343e55fb982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NpcName: 
+  NpcJob_Ocupation: 
+  NpcDescription: 
+  OtherNpcs: 
+  toneType: 0
+  onResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1439029066}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dia: {fileID: 373007183}
 --- !u!1 &2061090852
 GameObject:
   m_ObjectHideFlags: 0
