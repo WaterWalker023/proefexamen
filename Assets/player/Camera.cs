@@ -23,7 +23,7 @@ public class Camera : MonoBehaviour
         YRotation -= mouseY;
 
         
-        YRotation = Mathf.Clamp(YRotation, -90f, 90f);
+        YRotation = Mathf.Clamp(YRotation, -10f, 60f);
         transform.rotation = Quaternion.Euler(YRotation, transform.rotation.eulerAngles.y, 0);
     }
 }
