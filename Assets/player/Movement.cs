@@ -34,6 +34,7 @@ public class Movement : MonoBehaviour
         mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensitivity;
         transform.rotation *= Quaternion.Euler(0, mouseX, 0);
         
+        
         Velocity.y = -2;
         Velocity.y += gravity * Time.deltaTime;
         characterController.Move(Velocity * Time.deltaTime);
