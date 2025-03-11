@@ -28,7 +28,7 @@ public class binaryminigame : MonoBehaviour
             onWin.Invoke();
             getto = Random.Range(0, 32);
         }
-        Debug.Log(total);
+        //Debug.Log(total);
     }
 
     public void addnumber(int number)
