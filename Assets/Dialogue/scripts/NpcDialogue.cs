@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using OpenAI;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UIElements;
@@ -16,10 +17,11 @@ public class NpcDialogue : MonoBehaviour
     }; 
     
     [SerializeField] private string NpcName;
-    [SerializeField] private string NpcJob_Ocupation;
+    [SerializeField] private string NpcOccupation;
     
-    [TextArea(15, 20)] [SerializeField] private string NpcDescription;
+    [TextArea(10, 20)] [SerializeField] private string NpcDescription;
     [TextArea(5, 10)] [SerializeField] private string OtherNpcs;
+    [TextArea(5, 10)][SerializeField] private string textForQuest;
     
     [SerializeField] private Tone toneType;
     
@@ -28,7 +30,7 @@ public class NpcDialogue : MonoBehaviour
     [SerializeField] private GameObject dia;
     
     [SerializeField] private GameObject inputField;
-        
+    [SerializeField]private bool _hasDoneQuest;
     [Serializable]
     public class OnResponseEvent: UnityEvent<string>
     {
@@ -42,32 +44,43 @@ public class NpcDialogue : MonoBehaviour
     public void ActivedUi()
     {
         dia.SetActive (true);
-        inputField.GetComponent<TMP_InputField>().onEndEdit.AddListener(AskChatGPT);
+        Choices("hello");
+        inputField.GetComponent<TMP_InputField>().onEndEdit.AddListener(AskChatGpt);
     }
     
     public void DeactivedUi()
     {
-        inputField.GetComponent<TMP_InputField>().onEndEdit.RemoveListener(AskChatGPT);
+        inputField.GetComponent<TMP_InputField>().onEndEdit.RemoveListener(AskChatGpt);
         onResponse.Invoke("....");
         dia.SetActive(false);
     }
 
-    public async void AskChatGPT(string newText)
+
+    public void Choices(string text)
+    {
+        if (!_hasDoneQuest)
+        {
+            onResponse.Invoke(textForQuest);
+        }
+        else
+        {
+            AskChatGpt(text);
+        }
+    }
+    
+    private async void AskChatGpt(string newText)
     {
         ChatMessage devMessage = new ChatMessage
         {
-            Content = "you are:"+
+            Content = "you are:" +
                       "NPC: " +
                       NpcName +
-                      "NPC job: " +
-                      NpcJob_Ocupation +
+                      "NPC Occupation: " +
+                      NpcOccupation +
                       "NPC Description: " +
-                      NpcDescription+
-                      "Your Tone is"+
-                      toneType+
-                      "Other NPC residents: " +
-                      OtherNpcs+
-                      "when asked about other people only use th info you know dont generate things for them",
+                      NpcDescription +
+                      "Your Tone is" +
+                      toneType,
             Role = "developer"
         };
         if (!_once)
@@ -75,14 +88,29 @@ public class NpcDialogue : MonoBehaviour
             _messages.Add(devMessage);
             _once = true;
         }
-    
-        ChatMessage newMessage = new ChatMessage
+
+        if (_hasDoneQuest)
+        {
+            ChatMessage Quest = new ChatMessage
+            {
+                Content = "the player has completed your request"+
+                          "Other NPC residents: " +
+                          OtherNpcs+
+                          "when asked about other people only use th info you know dont generate locations for them",
+                Role = "developer"
+            };
+            _messages.Add(Quest);
+        }
+        
+        
+        ChatMessage newMessage = new ChatMessage()
         {
             Content = newText,
-            Role = "user"
+            Role = "system"
         };
+        
         _messages.Add(newMessage);
-
+        
         CreateChatCompletionRequest request = new CreateChatCompletionRequest
         {
             Messages = _messages,
