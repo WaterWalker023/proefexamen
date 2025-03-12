@@ -2539,23 +2539,27 @@ PrefabInstance:
       objectReference: {fileID: 2100811761}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcName
-      value: James
+      value: Bell
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: OtherNpcs
-      value: 'Sweets the farmer,Baron the flecther,Kronie the Mage,Fauna the forest
-        witch, Mumei the Knight; '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: inputField
       value: 
       objectReference: {fileID: 1710016538}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: startInput
+      value: Hello
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcDescription
-      value: James is an older fellow that runs the only bar on this island and thus
-        has interacted with a lot of people. He has a lot of drinks like chocomelk,
-        koffie and thee. He also has a deer head he shot himself he is realy proud
-        of that. The only thing he talks about is his cool adventures.
+      value: "Bell is very energetic, often loosing her train of thoughts while talking
+        to someone because she got distracted. After which she  realizes she lost
+        her train of thoughts and continues talking. She spends a lot of time in
+        the forest being fascinated by the things around her, and looking at firefly\u2019s.
+        She would describe herself as an energetic, happy, curious person."
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcJob_Ocupation
@@ -5354,23 +5358,35 @@ PrefabInstance:
       objectReference: {fileID: 2100811761}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcName
-      value: James
+      value: Ponyo
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: toneType
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: OtherNpcs
-      value: 'Sweets the farmer,Baron the flecther,Kronie the Mage,Fauna the forest
-        witch, Mumei the Knight; '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: inputField
       value: 
       objectReference: {fileID: 1710016538}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: startInput
+      value: Hello
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: NpcOccupation
+      value: Astrologist
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcDescription
-      value: James is an older fellow that runs the only bar on this island and thus
-        has interacted with a lot of people. He has a lot of drinks like chocomelk,
-        koffie and thee. He also has a deer head he shot himself he is realy proud
-        of that. The only thing he talks about is his cool adventures.
+      value: "Ponyo is, at her core, a shy astrology girl. This is why she doesn\u2019t
+        interact with many people. Even though she doesn\u2019t talk much, she often
+        watches (spies on the others) and forms her opinions based on their actions.
+        She spends most of her time looking through her telescope, observing the
+        stars\u2014and sometimes, the people around her."
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcJob_Ocupation
@@ -5572,23 +5588,31 @@ PrefabInstance:
       objectReference: {fileID: 2100811761}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcName
-      value: James
+      value: Moca
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: OtherNpcs
-      value: 'Sweets the farmer,Baron the flecther,Kronie the Mage,Fauna the forest
-        witch, Mumei the Knight; '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: inputField
       value: 
       objectReference: {fileID: 1710016538}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: startInput
+      value: Hello
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcDescription
-      value: James is an older fellow that runs the only bar on this island and thus
-        has interacted with a lot of people. He has a lot of drinks like chocomelk,
-        koffie and thee. He also has a deer head he shot himself he is realy proud
-        of that. The only thing he talks about is his cool adventures.
+      value: "Moca is a cute and stylish Latina girl who loves shopping and doing
+        her makeup. She always wears the cutest outfits in town and has a ton of
+        friends. Her bubbly personality makes her the life of the party, and she\u2019s
+        always chatting away. Sometimes, when she talks, you can hear a hint of her
+        Spanish accent, but that doesn\u2019t stop her from yapping on enthusiastically.\r\n\r\nShe
+        spends her time strolling through town, sipping coffee at the caf\xE9 while
+        working on her school assignments, and giving her friends fashion advice.
+        Whether she\u2019s browsing the latest trends or snapping selfies, Moca always
+        brings a little extra sparkle to the town."
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcJob_Ocupation
@@ -5916,23 +5940,39 @@ PrefabInstance:
       objectReference: {fileID: 2100811761}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcName
-      value: James
+      value: ' Luna'
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: OtherNpcs
-      value: 'Sweets the farmer,Baron the flecther,Kronie the Mage,Fauna the forest
-        witch, Mumei the Knight; '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: inputField
       value: 
       objectReference: {fileID: 1710016538}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: startInput
+      value: Hello
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: NpcOccupation
+      value: ' Farmer'
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcDescription
-      value: James is an older fellow that runs the only bar on this island and thus
-        has interacted with a lot of people. He has a lot of drinks like chocomelk,
-        koffie and thee. He also has a deer head he shot himself he is realy proud
-        of that. The only thing he talks about is his cool adventures.
+      value: "Luna spends most of her time tending to her garden. She\u2019s a strong,
+        independent woman who finds it extremely difficult to accept help from others.
+        She loves talking about all sorts of plants and is secretly a real nerd about
+        it, but most people don\u2019t seem to notice.\r\n\r\nBecause she keeps to
+        herself, people tend to avoid her\u2014or maybe they just don\u2019t know
+        how to approach her. She tries to go to town gatherings, but every time she\u2019s
+        there, she struggles to truly connect with the others. It\u2019s not that
+        she doesn\u2019t want to; she just doesn\u2019t know how. But deep down,
+        she enjoys those rare moments when she gets to talk about her passions.\r\n\r\nSince
+        people often overlook her, she ends up hearing all kinds of gossip without
+        even trying. While she\u2019d never call herself nosy, she knows more about
+        what\u2019s going on in town than most. Whether she uses that knowledge or
+        keeps it to herself\u2026 well, that depends."
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcJob_Ocupation
@@ -9917,23 +9957,35 @@ PrefabInstance:
       objectReference: {fileID: 2100811761}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcName
-      value: James
+      value: Pip
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: toneType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: OtherNpcs
-      value: 'Sweets the farmer,Baron the flecther,Kronie the Mage,Fauna the forest
-        witch, Mumei the Knight; '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: inputField
       value: 
       objectReference: {fileID: 1710016538}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: startInput
+      value: Hello
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: NpcOccupation
+      value: interieur design
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcDescription
-      value: James is an older fellow that runs the only bar on this island and thus
-        has interacted with a lot of people. He has a lot of drinks like chocomelk,
-        koffie and thee. He also has a deer head he shot himself he is realy proud
-        of that. The only thing he talks about is his cool adventures.
+      value: "Pip is a very sleepy, unbothered and sassy bunny. Next to her day job
+        of being an interieur designer, her favorite hobbies are sleeping and laying
+        in the grass. She is only really close with a few others, and doesn\u2019t
+        know a ton of information about the rest of the residents besides those who
+        she is close with."
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcJob_Ocupation
