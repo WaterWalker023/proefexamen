@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensY: 200
+  movement: {fileID: 2105433527470552156}
 --- !u!1 &3113372879588640484
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +215,7 @@ MonoBehaviour:
   speed: 12
   gravity: -100000
   sensitivity: 200
+  canMove: 0
 --- !u!1 &4784872205454374411
 GameObject:
   m_ObjectHideFlags: 0
