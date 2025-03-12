@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 989728079256461232}
-  - component: {fileID: 4594169606455027541}
+  - component: {fileID: 4076048281517714829}
   m_Layer: 0
   m_Name: Camera movement
   m_TagString: Untagged
@@ -33,7 +33,7 @@ Transform:
   - {fileID: 2330451152583084603}
   m_Father: {fileID: 4232559577622643153}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &4594169606455027541
+--- !u!114 &4076048281517714829
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,10 +42,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2412166901938311194}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d8aad0d2820d3eea84aeb6ce4bd05e1, type: 3}
+  m_Script: {fileID: 11500000, guid: aca9be868339883f593f56731ee89686, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookDirection: {x: 0, y: 0, z: 0}
+  sensY: 200
 --- !u!1 &3113372879588640484
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,13 +192,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 1
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.3, z: 0}
 --- !u!114 &2105433527470552156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 12
   gravity: -100000
+  sensitivity: 200
 --- !u!1 &4784872205454374411
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,7 +286,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.12}
-  m_LocalScale: {x: 1.5, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6562837462337352247}
@@ -353,6 +354,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8296051554866266343, guid: 6aace1790163e66419cd52af1a9689e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8296051554866266343, guid: 6aace1790163e66419cd52af1a9689e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8296051554866266343, guid: 6aace1790163e66419cd52af1a9689e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6aace1790163e66419cd52af1a9689e2, type: 3}
       propertyPath: m_Name
       value: Character_PenPaws_Ani_Fish
@@ -385,7 +398,7 @@ Animator:
   m_GameObject: {fileID: 1743381565916010572}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 64692c53b55579f4aad6ff20c98581e9, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
