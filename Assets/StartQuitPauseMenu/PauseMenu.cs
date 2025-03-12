@@ -1,15 +1,19 @@
 using Unity.Burst.Intrinsics;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject resumeButton;
 
     [SerializeField] private GameObject backToMenuButton;
-    
-    [SerializeField] private TMP_Text titleText;
+
+    public UnityEvent paused = new();
+
+    public UnityEvent resume = new();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,10 +26,12 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-            resumeButton.SetActive(true);
-            backToMenuButton.SetActive(true);
+            if (!GameObject.FindWithTag("Dia"))
+            {
+                paused.Invoke();
 
-            Time.timeScale = 0;
+                Time.timeScale = 0;
+            }
         }
     }
 
@@ -33,8 +39,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         
-        resumeButton.SetActive(false);
-        backToMenuButton.SetActive(false);
+        resume.Invoke();
     }
 
     public void backToMenu(string sceneName)

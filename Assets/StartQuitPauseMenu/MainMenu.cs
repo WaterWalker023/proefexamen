@@ -1,26 +1,31 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject mainCamera;
-    [SerializeField] private GameObject startButton;
-    [SerializeField] private GameObject quitButton;
     
     [SerializeField] private Transform gameplayCameraPos;
     
     [SerializeField] private bool hasClicked = false;
 
-    [SerializeField] private TMP_Text titleText;
-
+    public UnityEvent hasclickt = new();
+    [SerializeField] private UnityEvent _camerathere = new();
+    
     private void Update()
     {
         if (hasClicked)
         {
-            mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, gameplayCameraPos.position, 10 * Time.deltaTime);
+            mainCamera.transform.position = Vector3.MoveTowards(mainCamera.transform.position, gameplayCameraPos.position, 25 * Time.deltaTime);
+            if (mainCamera.transform.position == gameplayCameraPos.position)
+            {
+                _camerathere.Invoke();
+                enabled = false;
+            }
         }
     }
 
@@ -28,9 +33,7 @@ public class MainMenu : MonoBehaviour
     {
         hasClicked = true;
         
-        startButton.SetActive(false);
-        quitButton.SetActive(false);
-        titleText.gameObject.SetActive(false);
+        hasclickt.Invoke();
     }
 
     public void quitGame()
