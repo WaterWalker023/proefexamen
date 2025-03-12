@@ -149,7 +149,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1274992664}
-  - {fileID: 2059869477}
   - {fileID: 1107338983}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -231,6 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 964723859}
   - component: {fileID: 964723858}
+  - component: {fileID: 964723860}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -318,6 +318,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &964723860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964723857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &995508384
 GameObject:
   m_ObjectHideFlags: 0
@@ -593,13 +616,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NpcName: James
-  NpcJob_Ocupation: Town Bar Owner
-  NpcDescription: 'James is an older fellow that runs the only bar on this island
+  NpcOccupation: Town Barkeep
+  NpcDescription: James is an older fellow that runs the only bar on this island
     and thus has interacted with a lot of people. He has a lot of drinks like chocomelk,
-    koffie and thee. He also has a deer head he shot himself he is realy proud of
-    that. The only thing he talks about is his cool adventures  '
-  OtherNpcs: 'Sweets the farmer,Baron the flecther,Kronie the Mage,Fauna the forest
+    koffie and tea. He also has a deer head he shot himself he is realy proud of
+    that. The only thing he talks about is his cool adventures.
+  OtherNpcs: 'Sweets the farmer,Baron the flecther,Kronii the Mage,Fauna the forest
     witch, Mumei the Knight; '
+  NpcQuest: the persoon in front of you seems in need of a shipment of tea leafs
   toneType: 0
   onResponse:
     m_PersistentCalls:
@@ -617,6 +641,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   dia: {fileID: 1258354111}
+  inputField: {fileID: 2032608881}
+  _hasDoneQuest: 0
 --- !u!114 &1274992666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,94 +674,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2059869474
+--- !u!1 &2032608881 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 759668681627506280, guid: d133faf481537b84195b772ce599702a, type: 3}
+  m_PrefabInstance: {fileID: 3181437240471088704}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2059869477}
-  - component: {fileID: 2059869476}
-  - component: {fileID: 2059869475}
-  m_Layer: 0
-  m_Name: Dialogue Handeler (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2059869475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059869474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52751ed4a10c23e47bc50393d7aa7f27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  diaNpc: {fileID: 0}
-  diaInput: {fileID: 0}
---- !u!114 &2059869476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059869474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df231d1b1501cd94f8e7c343e55fb982, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NpcName: 'Baron '
-  NpcJob_Ocupation: Fletcher
-  NpcDescription: Baron is a master fletcher renowned for crafting the finest arrows
-    in the land. With years of experience, he meticulously selects the best wood
-    for shafts, balances them with precision, and fits them with expertly fletched
-    feathers to ensure perfect flight. His arrows are sought after by elite archers,
-    noble hunters, and even kings. Though skilled with a bow himself, Baron finds
-    his true passion in the art of arrow-making, knowing that each piece he creates
-    carries the potential for victory, survival, or legend. Now retired he lives
-    alone with little to no interaction with the others residents
-  OtherNpcs: 'Jame the Barkeep, Sweets the farmer,Kronie the Mage,Fauna the forest
-    witch, Mumei the Knight; '
-  toneType: 2
-  onResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  dia: {fileID: 0}
---- !u!4 &2059869477
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059869474}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -624, y: -348, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 802770335}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3181437240471088704
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -828,17 +771,37 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 995508386}
+    - target: {fileID: 3313250004465541676, guid: d133faf481537b84195b772ce599702a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313250004465541676, guid: d133faf481537b84195b772ce599702a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3313250004465541676, guid: d133faf481537b84195b772ce599702a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4286748738454278255, guid: d133faf481537b84195b772ce599702a, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1274992665}
+    - target: {fileID: 4286748738454278255, guid: d133faf481537b84195b772ce599702a, type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Choices
+      objectReference: {fileID: 0}
+    - target: {fileID: 4286748738454278255, guid: d133faf481537b84195b772ce599702a, type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NpcDialogue, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4470097137005458952, guid: d133faf481537b84195b772ce599702a, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5013837230578405834, guid: d133faf481537b84195b772ce599702a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00072080427
+      value: 0.000016398728
       objectReference: {fileID: 0}
     - target: {fileID: 5525615085385898816, guid: d133faf481537b84195b772ce599702a, type: 3}
       propertyPath: m_AnchorMax.x
