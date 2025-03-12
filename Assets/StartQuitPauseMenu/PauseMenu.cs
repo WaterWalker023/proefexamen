@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] private GameObject backToMenuButton;
 
+    private bool isopen;
+
     public UnityEvent paused = new();
 
     public UnityEvent resume = new();
@@ -24,18 +26,27 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Input.GetKey(KeyCode.Escape)) return;
-        if (!GameObject.FindWithTag("Dia"))
-        {
-            paused.Invoke();
+        if (!Input.GetKeyDown(KeyCode.Escape)) return;
+        if (GameObject.FindWithTag("Dia")) return;
+        
+        paused.Invoke();
 
-            Time.timeScale = 0;
+        Time.timeScale = 0;
+
+        if (isopen)
+        {
+            resumeGame();
+        }
+        else
+        {
+            isopen = true;
         }
     }
 
     public void resumeGame()
     {
         Time.timeScale = 1;
+        isopen = false;
         
         resume.Invoke();
     }
@@ -43,7 +54,8 @@ public class PauseMenu : MonoBehaviour
     public void backToMenu(string sceneName)
     {
         Time.timeScale = 1;
-
+        isopen = false;
+        
         SceneManager.LoadScene(sceneName);
 
     }
