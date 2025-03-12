@@ -14,14 +14,15 @@ public class NpcDialogue : MonoBehaviour
     private enum Tone
     {
         Friendly, Neutral, Serious, Apprehensive, Aggressive
-    }; 
-    
+    };
+
+    [SerializeField] private string startInput;
     [SerializeField] private string NpcName;
     [SerializeField] private string NpcOccupation;
     
     [TextArea(10, 20)] [SerializeField] private string NpcDescription;
     [TextArea(5, 10)] [SerializeField] private string OtherNpcs;
-    [TextArea(5, 10)][SerializeField] private string textForQuest;
+    [TextArea(5, 10)] [SerializeField] private string textForQuest;
     
     [SerializeField] private Tone toneType;
     
@@ -30,7 +31,7 @@ public class NpcDialogue : MonoBehaviour
     [SerializeField] private GameObject dia;
     
     [SerializeField] private GameObject inputField;
-    [SerializeField]private bool _hasDoneQuest;
+    [SerializeField] private bool _hasDoneQuest;
     [Serializable]
     public class OnResponseEvent: UnityEvent<string>
     {
@@ -44,7 +45,7 @@ public class NpcDialogue : MonoBehaviour
     public void ActivedUi()
     {
         dia.SetActive (true);
-        Choices("hello");
+        Choices(startInput);
         inputField.GetComponent<TMP_InputField>().onEndEdit.AddListener(AskChatGpt);
     }
     
