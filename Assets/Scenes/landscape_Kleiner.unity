@@ -2558,6 +2558,10 @@ PrefabInstance:
       value: Hello
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: _hasDoneQuest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcDescription
       value: "Bell is very energetic, often loosing her train of thoughts while talking
         to someone because she got distracted. After which she  realizes she lost
@@ -5390,6 +5394,10 @@ PrefabInstance:
       value: Astrologist
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: _hasDoneQuest
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcDescription
       value: "Ponyo is, at her core, a shy astrology girl. This is why she doesn\u2019t
         interact with many people. Even though she doesn\u2019t talk much, she often
@@ -5614,6 +5622,10 @@ PrefabInstance:
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: startInput
       value: Hello
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: _hasDoneQuest
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcDescription
@@ -5973,6 +5985,10 @@ PrefabInstance:
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcOccupation
       value: ' Farmer'
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: _hasDoneQuest
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcDescription
@@ -9996,6 +10012,10 @@ PrefabInstance:
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcOccupation
       value: interieur design
+      objectReference: {fileID: 0}
+    - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
+      propertyPath: _hasDoneQuest
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: NpcDescription
