@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float gravity = -10;
     [SerializeField] private float sensitivity;
 
-    bool canMove;
+    private bool canMove;
 
     public bool CanMove
     {
