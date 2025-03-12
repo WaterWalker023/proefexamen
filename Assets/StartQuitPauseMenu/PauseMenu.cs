@@ -24,14 +24,12 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (!Input.GetKey(KeyCode.Escape)) return;
+        if (!GameObject.FindWithTag("Dia"))
         {
-            if (!GameObject.FindWithTag("Dia"))
-            {
-                paused.Invoke();
+            paused.Invoke();
 
-                Time.timeScale = 0;
-            }
+            Time.timeScale = 0;
         }
     }
 
