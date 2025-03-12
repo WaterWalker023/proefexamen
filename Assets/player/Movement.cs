@@ -9,7 +9,12 @@ public class Movement : MonoBehaviour
     [SerializeField] float gravity = -10;
     [SerializeField] private float sensitivity;
 
-    [DoNotSerialize] public bool canMove;
+    bool canMove;
+
+    public bool CanMove
+    {
+        get { return canMove; } 
+    }
     
     private Vector3 Velocity;
     private float x;

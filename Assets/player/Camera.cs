@@ -17,7 +17,7 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!movement.canMove) { return;}
+        if (!movement.CanMove) { return;}
 
         mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
         YRotation -= mouseY;
