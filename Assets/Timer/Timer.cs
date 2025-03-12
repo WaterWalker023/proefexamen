@@ -22,7 +22,7 @@ public class Timer: MonoBehaviour
     public void Update()
     {
         if (time == 0) return;
-        time =- Time.deltaTime;
+        time = time - Time.deltaTime;
         timerText.text = Mathf.Floor(time / 60 ).ToString("00")  + ":" + Mathf.FloorToInt(time%60).ToString("00");
         
 
