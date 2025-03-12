@@ -13,7 +13,7 @@ public class UiReset : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             GameObject.FindWithTag("NPC").GetComponent<Interact>().LeaveInteract();
         }

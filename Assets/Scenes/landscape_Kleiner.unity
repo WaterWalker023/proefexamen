@@ -2543,7 +2543,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: OtherNpcs
-      value: 
+      value: "Ponyo the Astrologist, a shy introverted recluse \r\n\r\nMoca, stylish
+        Latina talks a lot friends with everyone spend most of her time at the cafe
+        \r\n\r\nPip the interieur designer, very sleepy and sassy \r\n\r\nLuna the
+        farmer, strong and independent talks about all things plants she keeps to
+        herself because most people don't know how to approach her "
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: inputField
@@ -5366,7 +5370,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: OtherNpcs
-      value: 
+      value: "Bell, very energetic sometimes Alouf spends most of her time around
+        the forest \r\n\r\nMoca, stylish Latina talks a lot friends with everyone
+        spend most of her time at the cafe \r\n\r\nPip the interieur designer, very
+        sleepy and sassy \r\n\r\nLuna the farmer, strong and independent talks about
+        all things plants she keeps to herself because most people don't know how
+        to approach her "
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: inputField
@@ -5592,7 +5601,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: OtherNpcs
-      value: 
+      value: "Bell, very energetic sometimes Alouf spends most of her time around
+        the forest \r\n\r\nPonyo the Astrologist, a shy introverted recluse \r\n\nPip
+        the interieur designer, very sleepy and sassy \r\n\r\nLuna the farmer, strong
+        and independent talks about all things plants she keeps to herself because
+        most people don't know how to approach her "
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: inputField
@@ -5944,7 +5957,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: OtherNpcs
-      value: 
+      value: "Bell, very energetic sometimes Alouf spends most of her time around
+        the forest \r\n\r\nPonyo the Astrologist, a shy introverted recluse \r\n\r\nMoca,
+        stylish Latina talks a lot friends with everyone spend most of her time at
+        the cafe \r\n\r\nPip the interieur designer, very sleepy and sassy \r\n\r\n"
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: inputField
@@ -9965,7 +9981,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: OtherNpcs
-      value: 
+      value: "Bell, very energetic sometimes Alouf spends most of her time around
+        the forest \r\n\r\nPonyo the Astrologist, a recluse \r\n\r\nMoca, spend most
+        of her time at the cafe \r\n\r\n\nLuna the farmer talks about plants a lot "
       objectReference: {fileID: 0}
     - target: {fileID: 339650195487836246, guid: 59151a2d19d836641bee5ad5b0d56b79, type: 3}
       propertyPath: inputField
