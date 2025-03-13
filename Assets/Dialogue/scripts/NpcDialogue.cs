@@ -47,8 +47,8 @@ public class NpcDialogue : MonoBehaviour
         dia.SetActive (true);
         dia.transform.Find("NPC_Name").transform.Find("Name_txt").GetComponent<TMP_Text>().SetText(NpcName);
         inputField.GetComponent<TMP_InputField>().onEndEdit.AddListener(AskChatGpt);
-        Choices(startInput);
         Time.timeScale = 0;
+        Choices(startInput);
     }
     
     public void DeactivedUi()
