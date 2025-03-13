@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -9,6 +10,11 @@ public class Movement : MonoBehaviour
     [SerializeField] private float sensitivity;
 
     private bool canMove;
+
+    public bool CanMove
+    {
+        get { return canMove; } 
+    }
     
     private Vector3 Velocity;
     private float x;
