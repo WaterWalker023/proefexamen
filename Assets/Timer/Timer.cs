@@ -4,25 +4,31 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 public class Timer: MonoBehaviour
 {
-    [SerializeField] private float timeleft = 10;
+    public float time = 10;
 
-    [SerializeField] private TMP_Text timerText;
+    [SerializeField]
+    public TMP_Text timerText;
     
     public UnityEvent timeOn0 = new();
+    
+    public void Start()
+    {
+       
+    }
 
     public void Update()
     {
-        if (timeleft == 0) return;
-        timeleft = timeleft - Time.deltaTime;
-        timerText.text = "Timer: " + (int) timeleft;
+        if (time == 0) return;
+        time =- Time.deltaTime;
+        timerText.text = Mathf.Floor(time / 60 ).ToString("00")  + ":" + Mathf.FloorToInt(time%60).ToString("00");
+        
 
-        if (timeleft <= 0)
+        if (time <= 0)
         {
-            timeleft = 0;
+            time = 0;
             timeOn0.Invoke();
             
         }
