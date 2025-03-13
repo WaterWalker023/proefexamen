@@ -20,14 +20,14 @@ public class Movement : MonoBehaviour
     private float x;
     private float z;
     private float mouseX;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        canMove = true;
+        canMove = false;
         characterController = GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
+    
     
     // Update is called once per frame
     void Update()
