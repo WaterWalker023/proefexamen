@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float speed = 12f;
     [SerializeField] float gravity = -10;
     [SerializeField] private float sensitivity;
+    [SerializeField] private Animator playerAnimator;
 
     private bool canMove;
 
@@ -26,14 +27,17 @@ public class Movement : MonoBehaviour
     {
         canMove = false;
         characterController = GetComponent<CharacterController>();
+        playerAnimator = GetComponentInChildren<Animator>();
     }
     
     
     // Update is called once per frame
     void Update()
     {
-        if (!canMove) return;
-
+        if (!canMove)
+        {
+            return;
+        }
         x = Input.GetAxis("Horizontal");
         z = Input.GetAxis("Vertical");
         
@@ -47,6 +51,15 @@ public class Movement : MonoBehaviour
         
         var move = transform.right * x + transform.forward * z;
         characterController.Move(move * (speed * Time.deltaTime));
+
+        if (x != 0 && z != 0)
+        {
+            playerAnimator.SetBool("IsWalking", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("IsWalking", false);
+        }
     }
 
     public void SetMovement(bool value)

@@ -45,8 +45,10 @@ public class NpcDialogue : MonoBehaviour
     public void ActivedUi()
     {
         dia.SetActive (true);
-        Choices(startInput);
+        dia.transform.Find("NPC_Name").transform.Find("Name_txt").GetComponent<TMP_Text>().SetText(NpcName);
         inputField.GetComponent<TMP_InputField>().onEndEdit.AddListener(AskChatGpt);
+        Time.timeScale = 0;
+        Choices(startInput);
     }
     
     public void DeactivedUi()
@@ -54,6 +56,7 @@ public class NpcDialogue : MonoBehaviour
         inputField.GetComponent<TMP_InputField>().onEndEdit.RemoveListener(AskChatGpt);
         onResponse.Invoke("....");
         dia.SetActive(false);
+        Time.timeScale = 1;
     }
 
 
@@ -97,7 +100,7 @@ public class NpcDialogue : MonoBehaviour
                 Content = "the player has completed your request"+
                           "Other NPC residents: " +
                           OtherNpcs+
-                          "when asked about other people only use th info you know dont generate locations for them",
+                          "when asked about other people only use the info you know dont generate locations for them",
                 Role = "developer"
             };
             _messages.Add(Quest);
@@ -125,7 +128,6 @@ public class NpcDialogue : MonoBehaviour
         {
             var chatResponse = response.Choices[0].Message;
             _messages.Add(chatResponse);
-            
             onResponse.Invoke(chatResponse.Content);
         }
     }

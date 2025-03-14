@@ -7,14 +7,14 @@ using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine.Events;
 
-public class ChooseNPCs: MonoBehaviour
+public class ChooseNpcs: MonoBehaviour
 {
     [SerializeField] private GameObject[] NPCS;
+    
 
     public void pullNPCS()
     {
         NPCS = GameObject.FindGameObjectsWithTag("NPC"); // Adds NPCs into a list by searching them with a tag called "NPC"
-
         
     }
 }
