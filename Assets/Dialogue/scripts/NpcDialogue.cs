@@ -100,7 +100,7 @@ public class NpcDialogue : MonoBehaviour
                 Content = "the player has completed your request"+
                           "Other NPC residents: " +
                           OtherNpcs+
-                          "when asked about other people only use th info you know dont generate locations for them",
+                          "when asked about other people only use the info you know dont generate locations for them",
                 Role = "developer"
             };
             _messages.Add(Quest);
@@ -128,7 +128,6 @@ public class NpcDialogue : MonoBehaviour
         {
             var chatResponse = response.Choices[0].Message;
             _messages.Add(chatResponse);
-            
             onResponse.Invoke(chatResponse.Content);
         }
     }
