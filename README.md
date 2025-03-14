@@ -9,3 +9,7 @@
 [The camara script for Y movement](https://github.com/WaterWalker023/proefexamen/blob/main/Assets/player/Camera.cs)\
 [The camara Scrip for X Movement](https://github.com/WaterWalker023/proefexamen/blob/main/Assets/player/Rotator.cs)\
 [The triggerbox](https://github.com/WaterWalker023/proefexamen/blob/main/Assets/Triggerbox/Triggerbox.cs)
+
+
+### Mauro Work
+[Dialogue](https://github.com/WaterWalker023/proefexamen/tree/main/Assets/Dialogue/scripts)\
