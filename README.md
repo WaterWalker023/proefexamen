@@ -11,5 +11,5 @@
 [The triggerbox](https://github.com/WaterWalker023/proefexamen/blob/main/Assets/Triggerbox/Triggerbox.cs)
 
 
-### Mauro Work
+### Mauros Work:
 [Dialogue](https://github.com/WaterWalker023/proefexamen/tree/main/Assets/Dialogue/scripts)  
